@@ -17,7 +17,7 @@ public class ContactsListPage extends BasePage {
 
     By NEW_CONTACT_BUTTON = By.cssSelector("[title=New]");
     String NAME_CONTACT = contacts.getFirstName().split(" ")[0];
-    By TITLE_NAME = By.cssSelector("[title~="+NAME_CONTACT+"]");
+    By TITLE_NAME = By.cssSelector("[title~=" + NAME_CONTACT + "]");
 
     @Override
     public ContactsListPage waitForPageOpened() {
@@ -30,7 +30,7 @@ public class ContactsListPage extends BasePage {
     }
 
     public void openPage() {
-        openPage(URL_LOGIN+URL_CONTACTS_PAGE);
+        driver.get(URL_LOGIN + URL_CONTACTS_PAGE);
     }
 
     public void clickOnNewContactButton() {
@@ -38,11 +38,7 @@ public class ContactsListPage extends BasePage {
     }
 
     public boolean isContactNameDisplayed() {
-        String label = driver.findElement(TITLE_NAME).getText();
-        if (label.contains(NAME_CONTACT)) {
-            return true;
-        }
-        return false;
+        return driver.findElement(TITLE_NAME).getText().contains(NAME_CONTACT);
     }
 }
 

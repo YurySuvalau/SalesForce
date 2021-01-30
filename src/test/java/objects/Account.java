@@ -8,20 +8,20 @@ public class Account {
     String fax;
     String industry;
     String employees;
-    String annual_revenue;
+    String annualRevenue;
     String description;
-    String billing_street;
-    String billing_city;
-    String billing_state_province;
-    String billing_zip_postal_code;
-    String billing_country;
+    String billingStreet;
+    String billingCity;
+    String billingStateProvince;
+    String billingZipPostalCode;
+    String billingCountry;
 
     public Account(String accountName, String webSite,
                    String type, String phone, String fax,
-                   String industry, String employees, String annual_revenue,
-                   String description, String billing_street, String billing_city,
-                   String billing_state_province, String billing_zip_postal_code,
-                   String billing_country) {
+                   String industry, String employees, String annualRevenue,
+                   String description, String billingStreet, String billingCity,
+                   String billingStateProvince, String billingZipPostalCode,
+                   String billingCountry) {
         this.accountName = accountName;
         this.webSite = webSite;
         this.type = type;
@@ -29,13 +29,13 @@ public class Account {
         this.fax = fax;
         this.industry = industry;
         this.employees = employees;
-        this.annual_revenue = annual_revenue;
+        this.annualRevenue = annualRevenue;
         this.description = description;
-        this.billing_street = billing_street;
-        this.billing_city = billing_city;
-        this.billing_state_province = billing_state_province;
-        this.billing_zip_postal_code = billing_zip_postal_code;
-        this.billing_country = billing_country;
+        this.billingStreet = billingStreet;
+        this.billingCity = billingCity;
+        this.billingStateProvince = billingStateProvince;
+        this.billingZipPostalCode = billingZipPostalCode;
+        this.billingCountry = billingCountry;
     }
 
     public String getAccountName() {
@@ -94,12 +94,12 @@ public class Account {
         this.employees = employees;
     }
 
-    public String getAnnual_revenue() {
-        return annual_revenue;
+    public String getAnnualRevenue() {
+        return annualRevenue;
     }
 
-    public void setAnnual_revenue(String annual_revenue) {
-        this.annual_revenue = annual_revenue;
+    public void setAnnualRevenue(String annualRevenue) {
+        this.annualRevenue = annualRevenue;
     }
 
     public String getDescription() {
@@ -110,44 +110,43 @@ public class Account {
         this.description = description;
     }
 
-    public String getBilling_street() {
-        return billing_street;
+    public String getBillingStreet() {
+        return billingStreet;
     }
 
-    public void setBilling_street(String billing_street) {
-        this.billing_street = billing_street;
+    public void setBillingStreet(String billingStreet) {
+        this.billingStreet = billingStreet;
     }
 
-    public String getBilling_city() {
-        return billing_city;
+    public String getBillingCity() {
+        return billingCity;
     }
 
-    public void setBilling_city(String billing_city) {
-        this.billing_city = billing_city;
+    public void setBillingCity(String billingCity) {
+        this.billingCity = billingCity;
     }
 
-    public String getBilling_state_province() {
-        return billing_state_province;
+    public String getBillingStateProvince() {
+        return billingStateProvince;
     }
 
-    public void setBilling_state_province(String billing_state_province) {
-        this.billing_state_province = billing_state_province;
+    public void setBillingStateProvince(String billingStateProvince) {
+        this.billingStateProvince = billingStateProvince;
     }
 
-    public String getBilling_zip_postal_code() {
-        return billing_zip_postal_code;
+    public String getBillingZipPostalCode() {
+        return billingZipPostalCode;
     }
 
-    public void setBilling_zip_postal_code(String billing_zip_postal_code) {
-        this.billing_zip_postal_code = billing_zip_postal_code;
+    public void setBillingZipPostalCode(String billingZipPostalCode) {
+        this.billingZipPostalCode = billingZipPostalCode;
     }
 
-    public String getBilling_country() {
-        return billing_country;
+    public String getBillingCountry() {
+        return billingCountry;
     }
 
-    public void setBilling_country(String billing_country) {
-        this.billing_country = billing_country;
+    public void setBillingCountry(String billingCountry) {
+        this.billingCountry = billingCountry;
     }
 }
-

@@ -14,7 +14,7 @@ public class LoginPage extends BasePage {
     }
 
     public void openPage() {
-        openPage(URL_LOGIN);
+        driver.get(URL_LOGIN);
     }
 
     public void login(String username, String password) {

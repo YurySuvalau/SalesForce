@@ -10,7 +10,7 @@ public class AccountListTest extends BaseTest {
         loginPage.openPage();
         loginPage.login(USERNAME, PASSWORD);
         homePage.waitForPageOpened();
-        homePage.openAccountPage();
+        accountListPage.openPage();
         accountListPage.waitForPageOpened();
         accountListPage.clickNewButton();
         newAccountModal.waitForPageOpened();

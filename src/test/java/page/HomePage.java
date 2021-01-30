@@ -28,18 +28,18 @@ public class HomePage extends BasePage {
     }
 
     public void openPage() {
-        openPage(URL_LOGIN + URL_HOME_PAGE);
+        driver.get(URL_LOGIN + URL_HOME_PAGE);
     }
 
-    public void openAccountPage() {
-        wait.until(ExpectedConditions.elementToBeClickable(ACCOUNT_BUTTON));
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("arguments[0].click();", driver.findElement(ACCOUNT_BUTTON));
-    }
+//    public void openAccountPage() {
+//        wait.until(ExpectedConditions.elementToBeClickable(ACCOUNT_BUTTON));
+//        JavascriptExecutor executor = (JavascriptExecutor) driver;
+//        executor.executeScript("arguments[0].click();", driver.findElement(ACCOUNT_BUTTON));
+//    }
 
-    public void openContactsPage() {
-        wait.until(ExpectedConditions.elementToBeClickable(CONTACTS_BUTTON));
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("arguments[0].click();", driver.findElement(CONTACTS_BUTTON));
-    }
+//    public void openContactsPage() {
+//        wait.until(ExpectedConditions.elementToBeClickable(CONTACTS_BUTTON));
+//        JavascriptExecutor executor = (JavascriptExecutor) driver;
+//        executor.executeScript("arguments[0].click();", driver.findElement(CONTACTS_BUTTON));
+//    }
 }

@@ -17,7 +17,7 @@ public class NewContactsModal extends BasePage {
     }
 
     By SELECT = By.cssSelector("[class~=select]");
-    By SAVE_BUTTON = By.xpath("//*[@class='button-container-inner slds-float_right']/button[3]");
+    By SAVE_BUTTON = By.xpath("//button[@title='Save']");
 
     @Override
     public NewContactsModal waitForPageOpened() {

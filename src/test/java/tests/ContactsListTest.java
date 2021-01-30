@@ -10,7 +10,7 @@ public class ContactsListTest extends BaseTest {
         loginPage.openPage();
         loginPage.login(USERNAME, PASSWORD);
         homePage.waitForPageOpened();
-        homePage.openContactsPage();
+        contactsListPagePage.openPage();
         contactsListPagePage.waitForPageOpened();
         contactsListPagePage.clickOnNewContactButton();
         newContactsModal.waitForPageOpened();

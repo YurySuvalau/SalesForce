@@ -17,16 +17,16 @@ public class NewAccountModal extends BasePage {
         super(driver);
     }
 
-    By MODEL_PAGE_LABEL = By.xpath("//h2[contains(text(), 'New Account')]");
+    By MODAL_PAGE_LABEL = By.xpath("//h2[contains(text(), 'New Account')]");
     By COPY_TO_SHIPPING_CHECKBOX = By.xpath("//*[contains(text(), 'Copy Billing')]/ancestor::*/input");
     By SAVE_BUTTON = By.cssSelector("[title=Save]");
 
     @Override
     public NewAccountModal waitForPageOpened() {
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(MODEL_PAGE_LABEL));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(MODAL_PAGE_LABEL));
         } catch (TimeoutException exception) {
-            Assert.fail(String.format("Account modal page it's not loaded! Locator: '%s' was not found!", MODEL_PAGE_LABEL));
+            Assert.fail(String.format("Account modal page it's not loaded! Locator: '%s' was not found!", MODAL_PAGE_LABEL));
         }
         return this;
     }
@@ -39,13 +39,13 @@ public class NewAccountModal extends BasePage {
         new Input(driver, "Fax").write(account.getFax());
         new DropDown(driver, "Industry").select(account.getIndustry());
         new Input(driver, "Employees").write(account.getEmployees());
-        new Input(driver, "Annual Revenue").write(account.getAnnual_revenue());
+        new Input(driver, "Annual Revenue").write(account.getAnnualRevenue());
         new TextArea(driver, "Description").write(account.getDescription());
-        new TextArea(driver, "Billing Street").write(account.getBilling_street());
-        new Input(driver, "Billing City").write(account.getBilling_city());
-        new Input(driver, "Billing State/Province").write(account.getBilling_state_province());
-        new Input(driver, "Billing Zip/Postal Code").write(account.getBilling_zip_postal_code());
-        new Input(driver, "Billing Country").write(account.getBilling_country());
+        new TextArea(driver, "Billing Street").write(account.getBillingStreet());
+        new Input(driver, "Billing City").write(account.getBillingCity());
+        new Input(driver, "Billing State/Province").write(account.getBillingStateProvince());
+        new Input(driver, "Billing Zip/Postal Code").write(account.getBillingZipPostalCode());
+        new Input(driver, "Billing Country").write(account.getBillingCountry());
     }
 
     public void clickOnCopyToShippingCheckbox() {

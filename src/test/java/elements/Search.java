@@ -8,7 +8,7 @@ public class Search {
     WebDriver driver;
     String label;
     String locator = "//*[contains(text(),'%s')]/ancestor::*[@class='slds-form-element__control']//input";
-    String selectOption = "//*[contains(text(),'%s')]/ancestor::div[contains(@role,'listbox')]";
+    String selectOption = "//*[contains(text(),'%s')]/ancestor::*[contains(@role,'listbox')]";
 
     public Search(WebDriver driver, String label) {
         this.driver = driver;
