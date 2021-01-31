@@ -20,13 +20,12 @@ public class NewContactsModal extends BasePage {
     By SAVE_BUTTON = By.xpath("//button[@title='Save']");
 
     @Override
-    public NewContactsModal waitForPageOpened() {
+    public void waitForPageOpened() {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(SELECT));
         } catch (TimeoutException exception) {
             Assert.fail(String.format("Account modal page it's not loaded! Locator: '%s' was not found!", SELECT));
         }
-        return this;
     }
 
     public void create(Contacts contacts) {

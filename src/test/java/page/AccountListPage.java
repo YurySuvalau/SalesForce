@@ -18,13 +18,12 @@ public class AccountListPage extends BasePage {
     By TITLE_NAME = By.cssSelector("[title~=" + NAME_ACCOUNT + "]");
 
     @Override
-    public AccountListPage waitForPageOpened() {
+    public void waitForPageOpened() {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(NEW_BUTTON));
         } catch (TimeoutException exception) {
             Assert.fail(String.format("Cart Page page it's not loaded! Locator: '%s' was not found!", NEW_BUTTON));
         }
-        return this;
     }
 
     public void openPage() {
@@ -36,10 +35,6 @@ public class AccountListPage extends BasePage {
     }
 
     public boolean isAccountNameDisplayed() {
-        String label = driver.findElement(TITLE_NAME).getText();
-        if (label.contains(NAME_ACCOUNT)) {
-            return true;
-        }
-        return false;
+        return driver.findElement(TITLE_NAME).getText().contains(NAME_ACCOUNT);
     }
 }

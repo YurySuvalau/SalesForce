@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-import static tests_data.TestData.account;
 import static tests_data.TestData.contacts;
 
 public class ContactsListPage extends BasePage {
@@ -20,13 +19,12 @@ public class ContactsListPage extends BasePage {
     By TITLE_NAME = By.cssSelector("[title~=" + NAME_CONTACT + "]");
 
     @Override
-    public ContactsListPage waitForPageOpened() {
+    public void waitForPageOpened() {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(NEW_CONTACT_BUTTON));
         } catch (TimeoutException exception) {
             Assert.fail(String.format("Home page it's not loaded! Locator: '%s' was not found!", NEW_CONTACT_BUTTON));
         }
-        return this;
     }
 
     public void openPage() {

@@ -1,7 +1,6 @@
 package page;
 
 import constants.Constants;
-import objects.Account;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,5 +17,5 @@ abstract class BasePage implements Constants {
         driver.get(url);
     }
 
-    abstract BasePage waitForPageOpened();
+    abstract void waitForPageOpened();
 }

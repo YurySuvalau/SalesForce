@@ -10,8 +10,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-import java.util.ArrayList;
-
 public class NewAccountModal extends BasePage {
     public NewAccountModal(WebDriver driver) {
         super(driver);
@@ -22,13 +20,12 @@ public class NewAccountModal extends BasePage {
     By SAVE_BUTTON = By.cssSelector("[title=Save]");
 
     @Override
-    public NewAccountModal waitForPageOpened() {
+    public void waitForPageOpened() {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(MODAL_PAGE_LABEL));
         } catch (TimeoutException exception) {
             Assert.fail(String.format("Account modal page it's not loaded! Locator: '%s' was not found!", MODAL_PAGE_LABEL));
         }
-        return this;
     }
 
     public void create(Account account) {
